@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+    id 'war'
+}
+
+war {
+    enabled=true
+}
+
+group 'org.example'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.glassfish.jersey.bundles', name: 'jaxrs-ri', version: '2.13'
+    implementation group: 'org.glassfish.jersey.media', name: 'jersey-media-json-jackson', version: '2.13'
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.25'
+    implementation group: 'org.hibernate', name: 'hibernate-core', version: '5.5.6.Final'
+    implementation group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.5.6.Final'
+
+
+
+    compileOnly group: 'javax', name: 'javaee-api', version: '8.0'
+
+
+}
